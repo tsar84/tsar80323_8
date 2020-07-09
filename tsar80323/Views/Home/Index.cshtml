@@ -1,0 +1,103 @@
+﻿
+<h2>@ViewData["Text"]</h2>
+
+<main class="container">
+
+
+
+    <h1>Лабораторная работа 1 <span class="badge badge-secondary"></span></h1>
+
+    <h2> Список <span class="badge badge-secondary"></span></h2>
+
+
+
+    <!--<div class="col-sm-2">-->
+    <ol type="A">
+        @for (int i = 1; i < 5; i++)
+        {
+            <li>элемент @i списка</li>
+        }
+    </ol>
+    <!--</div>-->
+
+
+    <hr />
+
+    <h2> Форма <span class="badge badge-secondary"></span></h2>
+
+    <form>
+
+        <select asp-items="@ViewData["Lst"] as SelectList"></select>
+
+
+
+
+        <div class="layer1">
+            <div class="form-group row">
+
+
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Чек-бокс
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <!--<div class="col-sm-2">Checkbox</div>-->
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkbox1" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Чек-бокс1
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="radio">
+
+                <input id="gridRadios1" type="radio" name="gridRadios" value="option1">
+
+                <label for="option1">Радио 1</label>
+
+                <input id="gridRadios2" type="radio" name="gridRadios" value="option2">
+
+                <label for="option2">Радио 2</label>
+
+                <input id="gridRadios3" type="radio" name="gridRadios" value="option3">
+
+                <label for="option3">Радио 3</label>
+            </div>
+
+
+
+
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Логин</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Введите пароль">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </div>
+            </div>
+    </form>
